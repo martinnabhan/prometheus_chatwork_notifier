@@ -1,0 +1,20 @@
+service: chatwork_notifier
+
+provider:
+  name: aws
+  runtime: rust
+
+plugins:
+  - serverless-rust
+
+package:
+  individually: true
+
+functions:
+  chatwork_notifier:
+    handler: chatwork_notifier
+    
+    events:
+      - http:
+          path: /
+          method: POST

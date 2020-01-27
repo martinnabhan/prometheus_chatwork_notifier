@@ -1,0 +1,9 @@
+{
+  "name": "chatwork_notifier",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "serverless": "^1.61.3",
+    "serverless-rust": "^0.3.7"
+  }
+}
