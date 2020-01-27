@@ -1,0 +1,20 @@
+service: prometheus_chatwork_notifier
+
+provider:
+  name: aws
+  runtime: rust
+
+plugins:
+  - serverless-rust
+
+package:
+  individually: true
+
+functions:
+  prometheus_chatwork_notifier:
+    handler: prometheus_chatwork_notifier
+    
+    events:
+      - http:
+          path: /
+          method: POST
